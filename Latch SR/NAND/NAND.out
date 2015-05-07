@@ -1,5 +1,5 @@
 
-**** 05/06/15 15:57:01 *********** Evaluation PSpice (Nov 1999) **************
+**** 05/07/15 10:18:21 *********** Evaluation PSpice (Nov 1999) **************
 
  * C:\Users\hp\Documents\Laboratorio-ADE-Cavaliere\Latch SR\NAND\NAND.sch
 
@@ -78,7 +78,7 @@ _    _($G_DPWR=$G_DPWR)
 
 .END
 
-**** 05/06/15 15:57:01 *********** Evaluation PSpice (Nov 1999) **************
+**** 05/07/15 10:18:21 *********** Evaluation PSpice (Nov 1999) **************
 
  * C:\Users\hp\Documents\Laboratorio-ADE-Cavaliere\Latch SR\NAND\NAND.sch
 
@@ -100,7 +100,7 @@ _    _($G_DPWR=$G_DPWR)
       TPHLMX   15.000000E-09 
 
 
-**** 05/06/15 15:57:01 *********** Evaluation PSpice (Nov 1999) **************
+**** 05/07/15 10:18:21 *********** Evaluation PSpice (Nov 1999) **************
 
  * C:\Users\hp\Documents\Laboratorio-ADE-Cavaliere\Latch SR\NAND\NAND.sch
 
@@ -138,5 +138,5 @@ _    _($G_DPWR=$G_DPWR)
 
           JOB CONCLUDED
 
-          TOTAL JOB TIME             .02
+          TOTAL JOB TIME             .03
 
