@@ -1,0 +1,135 @@
+
+**** 05/07/15 11:57:31 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\hp\Documents\Laboratorio-ADE-Cavaliere\Oscillatore\Oscillatore.sch
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+* Schematics Version 9.1 - Web Update 1
+* Thu May 07 11:57:29 2015
+
+
+
+** Analysis setup **
+.tran 0ns 1000ns
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "Oscillatore.net"
+
+**** INCLUDING Oscillatore.net ****
+* Schematics Netlist *
+
+
+
+X_U3A         Q $N_0001 $G_DPWR $G_DGND 7404 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_U2A         $N_0001 $N_0002 $G_DPWR $G_DGND 7404 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_U1A         CK-EN $N_0002 Q $G_DPWR $G_DGND 7400 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+U_CK-EN         STIM(1,1)
++ $G_DPWR $G_DGND
++ CK-EN 
++ IO_STM
++ IO_LEVEL=0
++  0n 0  
++ 150n 1  
+
+**** RESUMING Oscillatore.cir ****
+.INC "Oscillatore.als"
+
+
+
+**** INCLUDING Oscillatore.als ****
+* Schematics Aliases *
+
+.ALIASES
+X_U3A           U3A(A=Q Y=$N_0001 PWR=$G_DPWR GND=$G_DGND )
+X_U2A           U2A(A=$N_0001 Y=$N_0002 PWR=$G_DPWR GND=$G_DGND )
+X_U1A           U1A(A=CK-EN B=$N_0002 Y=Q PWR=$G_DPWR GND=$G_DGND )
+U_CK-EN          CK-EN(PIN1=CK-EN )
+_    _(Q=Q)
+_    _(CK-EN=CK-EN)
+_    _($G_DGND=$G_DGND)
+_    _($G_DPWR=$G_DPWR)
+.ENDALIASES
+
+
+**** RESUMING Oscillatore.cir ****
+.probe
+
+
+.END
+
+**** 05/07/15 11:57:31 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\hp\Documents\Laboratorio-ADE-Cavaliere\Oscillatore\Oscillatore.sch
+
+
+ ****     Digital Gate MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               D_04            D_00            
+      TPLHMN    4.800000E-09    4.400000E-09 
+      TPLHTY   12.000000E-09   11.000000E-09 
+      TPLHMX   22.000000E-09   22.000000E-09 
+      TPHLMN    3.200000E-09    2.800000E-09 
+      TPHLTY    8.000000E-09    7.000000E-09 
+      TPHLMX   15.000000E-09   15.000000E-09 
+
+
+**** 05/07/15 11:57:31 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\hp\Documents\Laboratorio-ADE-Cavaliere\Oscillatore\Oscillatore.sch
+
+
+ ****     Digital IO  MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               IO_STM          IO_STD          
+        DRVL    0             104            
+        DRVH    0              96.4          
+       AtoD1                 AtoD_STD        
+       AtoD2                 AtoD_STD_NX     
+       AtoD3                 AtoD_STD        
+       AtoD4                 AtoD_STD_NX     
+       DtoA1 DtoA_STM        DtoA_STD        
+       DtoA2 DtoA_STM        DtoA_STD        
+       DtoA3 DtoA_STM        DtoA_STD        
+       DtoA4 DtoA_STM        DtoA_STD        
+      TSWHL1                    1.373000E-09 
+      TSWHL2                    1.346000E-09 
+      TSWHL3                    1.511000E-09 
+      TSWHL4                    1.487000E-09 
+      TSWLH1                    3.382000E-09 
+      TSWLH2                    3.424000E-09 
+      TSWLH3                    3.517000E-09 
+      TSWLH4                    3.564000E-09 
+       TPWRT  100.000000E+03  100.000000E+03 
+
+
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME             .02
+

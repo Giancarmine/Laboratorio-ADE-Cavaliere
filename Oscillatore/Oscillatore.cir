@@ -1,0 +1,22 @@
+* C:\Users\hp\Documents\Laboratorio-ADE-Cavaliere\Oscillatore\Oscillatore.sch
+
+* Schematics Version 9.1 - Web Update 1
+* Thu May 07 11:57:29 2015
+
+
+
+** Analysis setup **
+.tran 0ns 1000ns
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "Oscillatore.net"
+.INC "Oscillatore.als"
+
+
+.probe
+
+
+.END
