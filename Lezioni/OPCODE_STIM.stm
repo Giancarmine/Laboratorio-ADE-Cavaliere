@@ -1,0 +1,22 @@
+* Header, containing signal names (standard comments allowed)
+data_op7 data_op6 data_op5 data_op4 data_op3 data_op2 data_op1 data_op0  
+
+* Beginning of the transitions - note the blank line
+0n 000000000 ; values are in binary
+100ns 000000010
++100ns 000000100
++100ns 000000110
++100ns 000001000
++100ns 000001010
++100ns 000001100
++100ns 000001110
++100ns 000010001
++100ns 000010010
++100ns 000010100
++100ns 000010110
++100ns 000011000
++100ns 000011010
++100ns 000011101
++100ns 000011111
++100ns 000100001
++100ns 0001XXXX1

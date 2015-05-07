@@ -1,0 +1,22 @@
+* C:\Users\hp\Documents\Laboratorio-ADE-Cavaliere\Latch SR\NOR port\LatchSR.sch
+
+* Schematics Version 9.1 - Web Update 1
+* Wed May 06 14:57:13 2015
+
+
+
+** Analysis setup **
+.tran 0ns 1000ns
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "LatchSR.net"
+.INC "LatchSR.als"
+
+
+.probe
+
+
+.END

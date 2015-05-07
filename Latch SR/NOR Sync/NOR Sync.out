@@ -1,0 +1,165 @@
+
+**** 05/06/15 15:44:58 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\hp\Documents\Laboratorio-ADE-Cavaliere\Latch SR\NOR Sync\NOR Sync.sch
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+* Schematics Version 9.1 - Web Update 1
+* Wed May 06 15:44:55 2015
+
+
+
+** Analysis setup **
+.tran 0ns 1000ns
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "NOR Sync.net"
+
+**** INCLUDING "NOR Sync.net" ****
+* Schematics Netlist *
+
+
+
+X_U2A         EN SET HB1_SET $G_DPWR $G_DGND 7408 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_HB1_U2A         Q-NEG HB1_RESET Q $G_DPWR $G_DGND 7402 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_HB1_U1A         HB1_SET Q Q-NEG $G_DPWR $G_DGND 7402 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_U1A         RESET EN HB1_RESET $G_DPWR $G_DGND 7408 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+U_EN         STIM(1,1)
++ $G_DPWR $G_DGND
++ EN 
++ IO_STM
++ IO_LEVEL=0
++  0n 1  
++ 300n 0  
++ 400n 1  
+U_SET         STIM(1,1)
++ $G_DPWR $G_DGND
++ SET 
++ IO_STM
++ IO_LEVEL=0
++  0n 0  
++ 100n 1  
++ 320n  0  
+U_RESET         STIM(1,1)
++ $G_DPWR $G_DGND
++ RESET 
++ IO_STM
++ IO_LEVEL=0
++  0n 1  
++ 100n 0  
++ 320n 1  
+
+**** RESUMING "NOR Sync.cir" ****
+.INC "NOR Sync.als"
+
+
+
+**** INCLUDING "NOR Sync.als" ****
+* Schematics Aliases *
+
+.ALIASES
+X_U2A           U2A(A=EN B=SET Y=HB1_SET PWR=$G_DPWR GND=$G_DGND )
+_   HB1(RESET=HB1_RESET SET=HB1_SET Q=Q Q-NEG=Q-NEG )
+X_HB1_U2A          HB1.U2A(A=Q-NEG B=HB1_RESET Y=Q PWR=$G_DPWR GND=$G_DGND )
+X_HB1_U1A          HB1.U1A(A=HB1_SET B=Q Y=Q-NEG PWR=$G_DPWR GND=$G_DGND )
+X_U1A           U1A(A=RESET B=EN Y=HB1_RESET PWR=$G_DPWR GND=$G_DGND )
+U_EN            EN(PIN1=EN )
+U_SET           SET(PIN1=SET )
+U_RESET          RESET(PIN1=RESET )
+_    _(EN=EN)
+_    _(SET=SET)
+_    _(RESET=RESET)
+_    _(Q-NEG=Q-NEG)
+_    _(HB1.Q-NEG=Q-NEG)
+_    _(HB1.RESET=HB1_RESET)
+_    _(Q=Q)
+_    _(HB1.Q=Q)
+_    _(HB1.SET=HB1_SET)
+_    _($G_DPWR=$G_DPWR)
+_    _($G_DGND=$G_DGND)
+.ENDALIASES
+
+
+**** RESUMING "NOR Sync.cir" ****
+.probe
+
+
+.END
+
+**** 05/06/15 15:44:58 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\hp\Documents\Laboratorio-ADE-Cavaliere\Latch SR\NOR Sync\NOR Sync.sch
+
+
+ ****     Digital Gate MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               D_08            D_02            
+      TPLHMN    7.000000E-09    4.800000E-09 
+      TPLHTY   17.500000E-09   12.000000E-09 
+      TPLHMX   27.000000E-09   22.000000E-09 
+      TPHLMN    4.800000E-09    3.200000E-09 
+      TPHLTY   12.000000E-09    8.000000E-09 
+      TPHLMX   19.000000E-09   15.000000E-09 
+
+
+**** 05/06/15 15:44:58 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\hp\Documents\Laboratorio-ADE-Cavaliere\Latch SR\NOR Sync\NOR Sync.sch
+
+
+ ****     Digital IO  MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               IO_STM          IO_STD          
+        DRVL    0             104            
+        DRVH    0              96.4          
+       AtoD1                 AtoD_STD        
+       AtoD2                 AtoD_STD_NX     
+       AtoD3                 AtoD_STD        
+       AtoD4                 AtoD_STD_NX     
+       DtoA1 DtoA_STM        DtoA_STD        
+       DtoA2 DtoA_STM        DtoA_STD        
+       DtoA3 DtoA_STM        DtoA_STD        
+       DtoA4 DtoA_STM        DtoA_STD        
+      TSWHL1                    1.373000E-09 
+      TSWHL2                    1.346000E-09 
+      TSWHL3                    1.511000E-09 
+      TSWHL4                    1.487000E-09 
+      TSWLH1                    3.382000E-09 
+      TSWLH2                    3.424000E-09 
+      TSWLH3                    3.517000E-09 
+      TSWLH4                    3.564000E-09 
+       TPWRT  100.000000E+03  100.000000E+03 
+
+
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME            0.00
+

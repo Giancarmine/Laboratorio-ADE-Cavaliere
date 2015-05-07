@@ -1,0 +1,22 @@
+* Schematics Netlist *
+
+
+
+X_U1A         SET Q Q-NEG $G_DPWR $G_DGND 7400 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_U2A         Q-NEG RESET Q $G_DPWR $G_DGND 7400 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+U_RESET         STIM(1,1)
++ $G_DPWR $G_DGND
++ RESET 
++ IO_STM
++ IO_LEVEL=0
++  0n 1  
++ 100n 0  
+U_SET         STIM(1,1)
++ $G_DPWR $G_DGND
++ SET 
++ IO_STM
++ IO_LEVEL=0
++  0n 0  
++ 100n 1  

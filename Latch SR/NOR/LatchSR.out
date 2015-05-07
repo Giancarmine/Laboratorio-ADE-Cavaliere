@@ -1,0 +1,144 @@
+
+**** 05/06/15 15:00:23 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\hp\Documents\Laboratorio-ADE-Cavaliere\Latch SR\NOR port\LatchSR.sch
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+* Schematics Version 9.1 - Web Update 1
+* Wed May 06 14:57:13 2015
+
+
+
+** Analysis setup **
+.tran 0ns 1000ns
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "LatchSR.net"
+
+**** INCLUDING LatchSR.net ****
+* Schematics Netlist *
+
+
+
+X_U2A         Q-NEG RESET Q $G_DPWR $G_DGND 7402 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_U1A         SET Q Q-NEG $G_DPWR $G_DGND 7402 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+U_SET         STIM(1,1)
++ $G_DPWR $G_DGND
++ SET 
++ IO_STM
++ IO_LEVEL=0
++  0n 1  
++ 200n 0  
++ 300n 1  
+U_RESET         STIM(1,1)
++ $G_DPWR $G_DGND
++ RESET 
++ IO_STM
++ IO_LEVEL=0
++  0n 0  
++ 200n 1  
++ 300n 0  
+
+**** RESUMING LatchSR.cir ****
+.INC "LatchSR.als"
+
+
+
+**** INCLUDING LatchSR.als ****
+* Schematics Aliases *
+
+.ALIASES
+X_U2A           U2A(A=Q-NEG B=RESET Y=Q PWR=$G_DPWR GND=$G_DGND )
+X_U1A           U1A(A=SET B=Q Y=Q-NEG PWR=$G_DPWR GND=$G_DGND )
+U_SET           SET(PIN1=SET )
+U_RESET          RESET(PIN1=RESET )
+_    _(Q-NEG=Q-NEG)
+_    _(RESET=RESET)
+_    _(Q=Q)
+_    _(SET=SET)
+_    _($G_DPWR=$G_DPWR)
+_    _($G_DGND=$G_DGND)
+.ENDALIASES
+
+
+**** RESUMING LatchSR.cir ****
+.probe
+
+
+.END
+
+**** 05/06/15 15:00:23 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\hp\Documents\Laboratorio-ADE-Cavaliere\Latch SR\NOR port\LatchSR.sch
+
+
+ ****     Digital Gate MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               D_02            
+      TPLHMN    4.800000E-09 
+      TPLHTY   12.000000E-09 
+      TPLHMX   22.000000E-09 
+      TPHLMN    3.200000E-09 
+      TPHLTY    8.000000E-09 
+      TPHLMX   15.000000E-09 
+
+
+**** 05/06/15 15:00:23 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\hp\Documents\Laboratorio-ADE-Cavaliere\Latch SR\NOR port\LatchSR.sch
+
+
+ ****     Digital IO  MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               IO_STM          IO_STD          
+        DRVL    0             104            
+        DRVH    0              96.4          
+       AtoD1                 AtoD_STD        
+       AtoD2                 AtoD_STD_NX     
+       AtoD3                 AtoD_STD        
+       AtoD4                 AtoD_STD_NX     
+       DtoA1 DtoA_STM        DtoA_STD        
+       DtoA2 DtoA_STM        DtoA_STD        
+       DtoA3 DtoA_STM        DtoA_STD        
+       DtoA4 DtoA_STM        DtoA_STD        
+      TSWHL1                    1.373000E-09 
+      TSWHL2                    1.346000E-09 
+      TSWHL3                    1.511000E-09 
+      TSWHL4                    1.487000E-09 
+      TSWLH1                    3.382000E-09 
+      TSWLH2                    3.424000E-09 
+      TSWLH3                    3.517000E-09 
+      TSWLH4                    3.564000E-09 
+       TPWRT  100.000000E+03  100.000000E+03 
+
+
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME            0.00
+

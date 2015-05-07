@@ -1,0 +1,22 @@
+* C:\Users\hp\Documents\Laboratorio-ADE-Cavaliere\Latch SR\NAND\NAND.sch
+
+* Schematics Version 9.1 - Web Update 1
+* Wed May 06 15:56:58 2015
+
+
+
+** Analysis setup **
+.tran 0ns 1000ns
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "NAND.net"
+.INC "NAND.als"
+
+
+.probe
+
+
+.END
