@@ -1,0 +1,48 @@
+* Schematics Netlist *
+
+
+
+X_U2A         SET CK EN Latch-SR-NAND_SET $G_DPWR $G_DGND 7410 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_U1A         RESET CK EN Latch-SR-NAND_RESET $G_DPWR $G_DGND 7410 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+U_EN         STIM(1,1)
++ $G_DPWR $G_DGND
++ EN 
++ IO_STM
++ IO_LEVEL=0
++  0n 1  
++ 250n 0  
++ 350n 1  
+U_CK         STIM(1,1)
++ $G_DPWR $G_DGND
++ CK 
++ IO_STM
++ IO_LEVEL=0
++  0n 1  
++ 130n 0  
++ 150n 1  
+X_Latch-SR-NAND_U1A         Latch-SR-NAND_SET Q-NEG Q $G_DPWR $G_DGND 7400
++  PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_Latch-SR-NAND_U3A         Q Latch-SR-NAND_RESET CK Q-NEG $G_DPWR $G_DGND 7410
++  PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+U_SET         STIM(1,1)
++ $G_DPWR $G_DGND
++ SET 
++ IO_STM
++ IO_LEVEL=0
++  0n 1  
++ 100n 0  
++ 200n 1  
++ 300n 0 
+U_RESET         STIM(1,1)
++ $G_DPWR $G_DGND
++ RESET 
++ IO_STM
++ IO_LEVEL=0
++  0n 0  
++ 100n 1  
++ 200n 0  
++ 300n 1 

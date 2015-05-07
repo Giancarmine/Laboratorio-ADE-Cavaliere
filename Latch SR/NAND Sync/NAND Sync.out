@@ -1,0 +1,184 @@
+
+**** 05/07/15 12:15:06 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\hp\Documents\Laboratorio-ADE-Cavaliere\Latch SR\NAND Sync\NAND Sync.sch
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+* Schematics Version 9.1 - Web Update 1
+* Thu May 07 12:15:03 2015
+
+
+
+** Analysis setup **
+.tran 0ns 1000ns
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "NAND Sync.net"
+
+**** INCLUDING "NAND Sync.net" ****
+* Schematics Netlist *
+
+
+
+X_U2A         SET CK EN Latch-SR-NAND_SET $G_DPWR $G_DGND 7410 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_U1A         RESET CK EN Latch-SR-NAND_RESET $G_DPWR $G_DGND 7410 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+U_EN         STIM(1,1)
++ $G_DPWR $G_DGND
++ EN 
++ IO_STM
++ IO_LEVEL=0
++  0n 1  
++ 250n 0  
++ 350n 1  
+U_CK         STIM(1,1)
++ $G_DPWR $G_DGND
++ CK 
++ IO_STM
++ IO_LEVEL=0
++  0n 1  
++ 130n 0  
++ 150n 1  
+X_Latch-SR-NAND_U1A         Latch-SR-NAND_SET Q-NEG Q $G_DPWR $G_DGND 7400
++  PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_Latch-SR-NAND_U3A         Q Latch-SR-NAND_RESET CK Q-NEG $G_DPWR $G_DGND 7410
++  PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+U_SET         STIM(1,1)
++ $G_DPWR $G_DGND
++ SET 
++ IO_STM
++ IO_LEVEL=0
++  0n 1  
++ 100n 0  
++ 200n 1  
++ 300n 0 
+U_RESET         STIM(1,1)
++ $G_DPWR $G_DGND
++ RESET 
++ IO_STM
++ IO_LEVEL=0
++  0n 0  
++ 100n 1  
++ 200n 0  
++ 300n 1 
+
+**** RESUMING "NAND Sync.cir" ****
+.INC "NAND Sync.als"
+
+
+
+**** INCLUDING "NAND Sync.als" ****
+* Schematics Aliases *
+
+.ALIASES
+X_U2A           U2A(A=SET B=CK C=EN Y=Latch-SR-NAND_SET PWR=$G_DPWR GND=$G_DGND
++  )
+X_U1A           U1A(A=RESET B=CK C=EN Y=Latch-SR-NAND_RESET PWR=$G_DPWR
++  GND=$G_DGND )
+U_EN            EN(PIN1=EN )
+U_CK            CK(PIN1=CK )
+_   Latch-SR-NAND(CK=CK RESET=Latch-SR-NAND_RESET SET=Latch-SR-NAND_SET Q=Q-NEG
++  Q-NEG=Q )
+X_Latch-SR-NAND_U1A          Latch-SR-NAND.U1A(A=Latch-SR-NAND_SET B=Q-NEG Y=Q
++  PWR=$G_DPWR GND=$G_DGND )
+X_Latch-SR-NAND_U3A          Latch-SR-NAND.U3A(A=Q B=Latch-SR-NAND_RESET C=CK
++  Y=Q-NEG PWR=$G_DPWR GND=$G_DGND )
+U_SET           SET(PIN1=SET )
+U_RESET          RESET(PIN1=RESET )
+_    _(SET=SET)
+_    _(EN=EN)
+_    _(RESET=RESET)
+_    _(Latch-SR-NAND.SET=Latch-SR-NAND_SET)
+_    _(Q-NEG=Q-NEG)
+_    _(Latch-SR-NAND.Q=Q-NEG)
+_    _(Q=Q)
+_    _(Latch-SR-NAND.Q-NEG=Q)
+_    _($G_DPWR=$G_DPWR)
+_    _($G_DGND=$G_DGND)
+_    _(Latch-SR-NAND.RESET=Latch-SR-NAND_RESET)
+_    _(CK=CK)
+.ENDALIASES
+
+
+**** RESUMING "NAND Sync.cir" ****
+.probe
+
+
+.END
+
+**** 05/07/15 12:15:06 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\hp\Documents\Laboratorio-ADE-Cavaliere\Latch SR\NAND Sync\NAND Sync.sch
+
+
+ ****     Digital Gate MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               D_10            D_00            
+      TPLHMN    4.400000E-09    4.400000E-09 
+      TPLHTY   11.000000E-09   11.000000E-09 
+      TPLHMX   22.000000E-09   22.000000E-09 
+      TPHLMN    2.800000E-09    2.800000E-09 
+      TPHLTY    7.000000E-09    7.000000E-09 
+      TPHLMX   15.000000E-09   15.000000E-09 
+
+
+**** 05/07/15 12:15:06 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\hp\Documents\Laboratorio-ADE-Cavaliere\Latch SR\NAND Sync\NAND Sync.sch
+
+
+ ****     Digital IO  MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               IO_STM          IO_STD          
+        DRVL    0             104            
+        DRVH    0              96.4          
+       AtoD1                 AtoD_STD        
+       AtoD2                 AtoD_STD_NX     
+       AtoD3                 AtoD_STD        
+       AtoD4                 AtoD_STD_NX     
+       DtoA1 DtoA_STM        DtoA_STD        
+       DtoA2 DtoA_STM        DtoA_STD        
+       DtoA3 DtoA_STM        DtoA_STD        
+       DtoA4 DtoA_STM        DtoA_STD        
+      TSWHL1                    1.373000E-09 
+      TSWHL2                    1.346000E-09 
+      TSWHL3                    1.511000E-09 
+      TSWHL4                    1.487000E-09 
+      TSWLH1                    3.382000E-09 
+      TSWLH2                    3.424000E-09 
+      TSWLH3                    3.517000E-09 
+      TSWLH4                    3.564000E-09 
+       TPWRT  100.000000E+03  100.000000E+03 
+
+
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME            0.00
+
