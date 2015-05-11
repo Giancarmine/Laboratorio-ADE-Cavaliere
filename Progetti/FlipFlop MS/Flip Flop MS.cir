@@ -1,0 +1,22 @@
+* C:\Users\hp\Documents\Laboratorio-ADE-Cavaliere\Progetti\FlipFlop MS\Flip Flop MS.sch
+
+* Schematics Version 9.1 - Web Update 1
+* Mon May 11 15:44:27 2015
+
+
+
+** Analysis setup **
+.tran 0ns 1000ns
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "Flip Flop MS.net"
+.INC "Flip Flop MS.als"
+
+
+.probe
+
+
+.END

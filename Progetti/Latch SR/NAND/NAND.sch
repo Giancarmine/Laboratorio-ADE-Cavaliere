@@ -1,4 +1,4 @@
-*version 9.1 3079608607
+*version 9.1 756291362
 u 60
 U? 4
 ? 5
@@ -22,9 +22,9 @@ connectViaLocalLabels 0
 NoStim4ExtIFPortsWarnings 1
 AutoGenStim4ExtIFPorts 1
 @index
-pageloc 1 0 2326 
+pageloc 1 0 2390 
 @status
-c 115:04:07:11:20:46;1430990446
+c 115:04:11:15:36:51;1431351411
 n 0 115:04:06:15:56:58;1430920618 e 
 s 0 115:04:07:10:22:41;1430986961 e 
 *page 1 0 970 720 iA
@@ -38,7 +38,7 @@ a 1 xr 3 0 31 8 hcn 100 LABEL=Q
 port 44 IF_IN 450 280 h
 a 1 xr 3 0 19 8 hcn 100 LABEL=RESET
 port 55 IF_IN 450 340 h
-a 1 xr 3 0 19 8 hcn 100 LABEL=CK
+a 1 xr 3 0 19 8 hcn 100 LABEL=CL
 @parts
 part 2 7400 580 150 h
 a 0 sp 11 0 40 50 hln 100 PART=7400
@@ -93,7 +93,9 @@ s 450 280 580 280 49
 a 0 sr 3 0 505 278 hcn 100 LABEL=RESET
 a 0 up 33 0 505 279 hct 100 LVL=
 w 57
+a 0 up 0:33 0 0 0 hln 100 LVL=
 s 450 340 580 340 56
+a 0 up 33 0 515 339 hct 100 LVL=
 s 580 340 580 290 58
 @junction
 j 650 160
