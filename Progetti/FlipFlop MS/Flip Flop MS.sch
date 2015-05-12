@@ -1,5 +1,5 @@
-*version 9.1 3398860823
-u 144
+*version 9.1 492437976
+u 226
 HB? 2
 DSTM? 5
 U? 3
@@ -23,31 +23,37 @@ connectViaLocalLabels 0
 NoStim4ExtIFPortsWarnings 1
 AutoGenStim4ExtIFPorts 1
 @index
-pageloc 1 0 6273 
+pageloc 1 0 5588 
 @status
 n 0 115:04:11:15:44:27;1431351867 e 
 s 0 115:04:11:15:48:16;1431352096 e 
+c 115:04:12:10:13:22;1431418402
 *page 1 0 970 720 iA
 @ports
+port 146 IF_IN 230 320 h
+a 1 xr 3 0 19 8 hcn 100 LABEL=CL
+port 147 IF_IN 230 360 h
+a 1 xr 3 0 19 8 hcn 100 LABEL=EN
+port 148 IF_IN 230 400 h
+a 1 xr 3 0 19 8 hcn 100 LABEL=D
+port 144 IF_OUT 740 340 h
+a 1 xr 3 0 31 8 hcn 100 LABEL=Q
+port 145 IF_OUT 740 360 h
+a 1 xr 3 0 31 8 hcn 100 LABEL=Q-NEG
 @parts
-part 32 7404 450 220 h
+part 32 7404 270 380 h
 a 0 sp 11 0 40 40 hln 100 PART=7404
 a 0 s 0:13 0 0 0 hln 100 PKGTYPE=DIP14
 a 0 s 0:13 0 0 0 hln 100 GATE=A
 a 0 a 0:13 0 0 0 hln 100 PKGREF=U1
 a 0 ap 9 0 28 8 hln 100 REFDES=U1A
-part 69 DigClock 410 200 h
-a 0 u 0 0 0 20 hln 100 ONTIME=100n
-a 0 u 0 0 0 30 hln 100 OFFTIME=100n
-a 0 x 0:13 0 0 0 hln 100 PKGREF=EN
-a 1 xp 9 0 0 -2 hln 100 REFDES=EN
-part 89 7404 570 310 h
+part 89 7404 390 470 h
 a 0 sp 11 0 40 40 hln 100 PART=7404
 a 0 s 0:13 0 0 0 hln 100 PKGTYPE=DIP14
 a 0 s 0:13 0 0 0 hln 100 GATE=A
 a 0 a 0:13 0 0 0 hln 100 PKGREF=U2
 a 0 ap 9 0 28 8 hln 100 REFDES=U2A
-block 2 blocksym2 540 160 h
+block 2 blocksym2 360 320 h
 a 0 x 0:13 0 0 0 hln 100 PKGREF=SR-Sync-1
 a 0 xp 9 0 0 0 hln 100 REFDES=SR-Sync-1
 *symbol blocksym2
@@ -80,7 +86,7 @@ a 0 s 0:13 0 0 0 hln 100 FLOAT=n
 @graphics 70 100 0 0 10
 r 0 0 0 70 100
 *end blocksym
-block 70 blocksym2 770 160 h
+block 70 blocksym2 590 320 h
 a 0 x 0:13 0 0 0 hln 100 PKGREF=SR-Sync-2
 a 0 xp 9 0 0 0 hln 100 REFDES=SR-Sync-2
 *symbol blocksym70
@@ -113,199 +119,162 @@ a 0 s 0:13 0 0 0 hln 100 FLOAT=n
 @graphics 70 100 0 0 10
 r 0 0 0 70 100
 *end blocksym
-part 3 STIM1 410 160 h
-a 0 x 0:13 0 0 0 hln 100 PKGREF=CL
-a 0 xp 9 0 1 -2 hln 100 REFDES=CL
-a 0 u 0 0 0 80 hln 100 COMMAND1=0n 0
-a 0 u 0 0 0 90 hln 100 COMMAND2=20n 1
-a 0 u 0 0 0 100 hln 100 COMMAND3=
-part 5 STIM1 410 240 h
-a 0 u 0 0 0 80 hln 100 COMMAND1=0n 0
-a 0 u 0 0 0 90 hln 100 COMMAND2=130n 1
-a 0 u 0 0 0 100 hln 100 COMMAND3=260n 0
-a 0 u 0 0 0 110 hln 100 COMMAND4=320n 1
-a 0 x 0:13 0 0 0 hln 100 PKGREF=D
-a 0 xp 9 0 1 -2 hln 100 REFDES=D
-a 0 u 0 0 0 120 hln 100 COMMAND5=500n 0
-a 0 u 0 0 0 130 hln 100 COMMAND6=650n 1
-part 1 titleblk 970 720 h
-a 1 s 13 0 350 10 hcn 100 PAGESIZE=A
+part 225 titleblk 970 720 h
+a 1 u 13 0 10 10 hln 100 CompanyName=Cuofano Carmine
+a 1 u 13 0 10 20 hln 100 Line1=N86001700
+a 1 u 13 0 10 30 hln 100 Line2=
+a 1 u 13 0 330 10 hrn 100 SizeText=Page Size: A3
+a 1 u 13 0 60 95 hln 100 Revision=
 a 1 s 13 0 180 60 hcn 100 PAGETITLE=
-a 1 s 13 0 300 95 hrn 100 PAGENO=1
-a 1 s 13 0 340 95 hrn 100 PAGECOUNT=1
-part 62 nodeMarker 430 200 h
-a 0 s 0 0 0 0 hln 100 PROBEVAR=
-a 0 a 0 0 4 22 hlb 100 LABEL=2
-part 64 nodeMarker 410 240 h
-a 0 s 0 0 0 0 hln 100 PROBEVAR=
-a 0 a 0 0 4 22 hlb 100 LABEL=3
-part 60 nodeMarker 430 160 h
-a 0 s 0 0 0 0 hln 100 PROBEVAR=
-a 0 a 0 0 4 22 hlb 100 LABEL=1
-part 115 nodeMarker 900 180 h
-a 0 s 0 0 0 0 hln 100 PROBEVAR=Q
-a 0 a 0 0 4 22 hlb 100 LABEL=6
-part 117 nodeMarker 900 200 h
-a 0 s 0 0 0 0 hln 100 PROBEVAR=Q-NEG
-a 0 a 0 0 4 22 hlb 100 LABEL=7
+a 1 u 13 0 10 40 hln 100 Line3=Flip Flop Master/Slave
+a 1 x 13 0 350 10 hcn 100 PAGESIZE=
+a 1 u 13 0 150 95 hln 100 Date=11/05/2015
+a 1 u 13 0 320 95 hrn 100 PageText=Page: 1/1
+a 1 u 13 0 10 95 hln 100 RevText=Revision: 2.0
+a 1 x 13 0 340 95 hrn 100 PAGECOUNT=1
+a 1 x 13 0 300 95 hrn 100 PAGENO=1
 @conn
 w 34
 a 0 up 0:33 0 0 0 hln 100 LVL=
-s 500 220 540 220 33
-a 0 up 33 0 520 219 hct 100 LVL=
-w 36
+s 320 380 360 380 33
+a 0 up 33 0 340 379 hct 100 LVL=
+w 55
 a 0 up 0:33 0 0 0 hln 100 LVL=
-a 0 sr 0 0 0 0 hln 100 LABEL=D
-s 410 240 440 240 45
-a 0 up 33 0 425 239 hct 100 LVL=
-a 0 sr 3 0 425 238 hcn 100 LABEL=D
-s 440 260 440 240 41
-s 440 220 450 220 43
-s 440 240 440 220 47
-s 530 260 440 260 39
-s 540 240 530 240 35
-s 530 240 530 260 37
+s 440 470 520 470 90
+s 520 470 520 360 92
+a 0 up 33 0 522 415 hlt 100 LVL=
+s 520 360 590 360 95
+w 53
+a 0 up 0:33 0 0 0 hln 100 LVL=
+s 430 340 540 340 102
+a 0 up 33 0 470 339 hct 100 LVL=
+s 540 340 540 400 103
+s 540 400 590 400 105
+w 100
+a 0 up 0:33 0 0 0 hln 100 LVL=
+s 430 360 510 360 101
+a 0 up 33 0 470 359 hct 100 LVL=
+s 510 360 510 380 107
+s 510 380 590 380 109
+w 112
+a 0 up 0:33 0 0 0 hln 100 LVL=
+a 0 sr 0 0 0 0 hln 100 LABEL=Q
+s 660 340 740 340 116
+a 0 up 33 0 700 339 hct 100 LVL=
+a 0 sr 3 0 700 338 hcn 100 LABEL=Q
+w 114
+a 0 up 0:33 0 0 0 hln 100 LVL=
+a 0 sr 0 0 0 0 hln 100 LABEL=Q-NEG
+s 660 360 740 360 118
+a 0 up 33 0 700 359 hct 100 LVL=
+a 0 sr 3 0 700 358 hcn 100 LABEL=Q-NEG
 w 72
 a 0 up 0:33 0 0 0 hln 100 LVL=
 a 0 sr 0 0 0 0 hln 100 LABEL=CLEAR
-s 430 160 510 160 61
-a 0 up 33 0 470 159 hct 100 LVL=
-a 0 sr 3 0 470 158 hcn 100 LABEL=CLEAR
-s 770 180 750 180 71
-s 750 180 750 90 73
-s 750 90 510 90 75
-s 410 160 430 160 6
-s 530 160 530 180 7
-s 530 180 540 180 8
-s 510 160 530 160 79
-s 510 90 510 160 77
+s 230 320 330 320 79
+a 0 sr 3 0 290 318 hcn 100 LABEL=CLEAR
+a 0 up 33 0 290 319 hct 100 LVL=
+s 350 320 350 340 7
+s 350 340 360 340 8
+s 590 340 570 340 71
+s 570 340 570 250 73
+s 570 250 330 250 75
+s 330 320 350 320 214
+s 330 250 330 320 77
 w 14
+a 0 up 0:33 0 0 0 hln 100 LVL=
 a 0 sr 0 0 0 0 hln 100 LABEL=ENABLE
+s 230 360 330 360 82
+a 0 up 33 0 295 359 hct 100 LVL=
+a 0 sr 3 0 295 358 hcn 100 LABEL=ENABLE
+s 330 360 360 360 217
+s 330 360 330 470 80
+s 390 470 330 470 97
+w 36
 a 0 up 0:33 0 0 0 hln 100 LVL=
-s 430 200 510 200 63
-a 0 sr 3 0 475 198 hcn 100 LABEL=ENABLE
-a 0 up 33 0 475 199 hct 100 LVL=
-s 410 200 430 200 13
-s 510 200 540 200 82
-s 510 200 510 310 80
-s 570 310 510 310 97
-w 55
-a 0 up 0:33 0 0 0 hln 100 LVL=
-s 620 310 700 310 90
-s 700 310 700 200 92
-a 0 up 33 0 702 255 hlt 100 LVL=
-s 700 200 770 200 95
-w 53
-a 0 up 0:33 0 0 0 hln 100 LVL=
-s 610 180 720 180 102
-a 0 up 33 0 650 179 hct 100 LVL=
-s 720 180 720 240 103
-s 720 240 770 240 105
-w 100
-a 0 up 0:33 0 0 0 hln 100 LVL=
-s 610 200 690 200 101
-a 0 up 33 0 650 199 hct 100 LVL=
-s 690 200 690 220 107
-s 690 220 770 220 109
-w 112
-a 0 sr 0 0 0 0 hln 100 LABEL=Q
-a 0 up 0:33 0 0 0 hln 100 LVL=
-s 840 180 900 180 111
-a 0 sr 3 0 880 178 hcn 100 LABEL=Q
-a 0 up 33 0 880 179 hct 100 LVL=
-s 900 180 920 180 116
-w 114
-a 0 sr 0 0 0 0 hln 100 LABEL=Q-NEG
-a 0 up 0:33 0 0 0 hln 100 LVL=
-s 840 200 900 200 113
-a 0 sr 3 0 880 198 hcn 100 LABEL=Q-NEG
-a 0 up 33 0 880 199 hct 100 LVL=
-s 900 200 920 200 118
+a 0 sr 0 0 0 0 hln 100 LABEL=D
+s 230 400 260 400 45
+a 0 up 33 0 245 399 hct 100 LVL=
+a 0 sr 3 0 245 398 hcn 100 LABEL=D
+s 260 400 260 380 159
+s 260 420 260 400 41
+s 260 380 270 380 43
+s 350 420 260 420 39
+s 360 400 350 400 35
+s 350 400 350 420 37
 @junction
-j 500 220
+j 320 380
 + p 32 Y
 + w 34
-j 450 220
-+ p 32 A
-+ w 36
-j 410 240
-+ p 5 pin1
-+ w 36
-j 440 240
-+ w 36
-+ w 36
-j 410 240
-+ p 64 pin1
-+ p 5 pin1
-j 410 240
-+ p 64 pin1
-+ w 36
-j 430 200
-+ p 62 pin1
-+ w 14
-j 410 200
-+ p 69 1
-+ w 14
-j 510 200
-+ w 14
-+ w 14
-j 540 180
-+ p 2 CL
-+ w 72
-j 540 200
-+ p 2 EN
-+ w 14
-j 540 220
+j 360 380
 + p 2 RESET
 + w 34
-j 540 240
-+ p 2 SET
-+ w 36
-j 610 180
-+ p 2 Q
-+ w 53
-j 610 200
-+ p 2 Q-NEG
-+ w 100
-j 620 310
+j 440 470
 + p 89 Y
 + w 55
-j 570 310
-+ p 89 A
-+ w 14
-j 900 200
-+ p 117 pin1
-+ w 114
-j 900 180
-+ p 115 pin1
-+ w 112
-j 410 160
-+ p 3 pin1
-+ w 72
-j 430 160
-+ p 60 pin1
-+ w 72
-j 510 160
-+ w 72
-+ w 72
-j 770 180
-+ p 70 CL
-+ w 72
-j 770 200
+j 590 360
 + p 70 EN
 + w 55
-j 770 240
+j 430 340
++ p 2 Q
++ w 53
+j 590 400
 + p 70 SET
 + w 53
-j 770 220
+j 430 360
++ p 2 Q-NEG
++ w 100
+j 590 380
 + p 70 RESET
 + w 100
-j 840 180
+j 660 340
 + p 70 Q
 + w 112
-j 840 200
+j 740 340
++ s 144
++ w 112
+j 660 360
 + p 70 Q-NEG
 + w 114
+j 740 360
++ s 145
++ w 114
+j 230 320
++ s 146
++ w 72
+j 360 340
++ p 2 CL
++ w 72
+j 590 340
++ p 70 CL
++ w 72
+j 330 320
++ w 72
++ w 72
+j 230 360
++ s 147
++ w 14
+j 360 360
++ p 2 EN
++ w 14
+j 330 360
++ w 14
++ w 14
+j 390 470
++ p 89 A
++ w 14
+j 230 400
++ s 148
++ w 36
+j 260 400
++ w 36
++ w 36
+j 270 380
++ p 32 A
++ w 36
+j 360 400
++ p 2 SET
++ w 36
 @attributes
 a 0 s 0:13 0 0 0 hln 100 PAGETITLE=
 a 0 s 0:13 0 0 0 hln 100 PAGENO=1
