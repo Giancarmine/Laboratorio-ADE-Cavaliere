@@ -1,5 +1,5 @@
-*version 9.1 4104787925
-u 78
+*version 9.1 874995476
+u 83
 HB? 7
 @libraries
 @analysis
@@ -16,11 +16,13 @@ connectViaLocalLabels 0
 NoStim4ExtIFPortsWarnings 1
 AutoGenStim4ExtIFPorts 1
 @index
-pageloc 1 0 4270 
+pageloc 1 0 4583 
 @status
-c 115:04:12:20:35:15;1431455715
+c 115:04:13:15:27:19;1431523639
 *page 1 0 970 720 iA
 @ports
+port 82 IF_OUT 850 110 h
+a 1 xr 3 0 31 8 hcn 100 LABEL=OUT_1:0
 @parts
 part 6 STIM1 110 80 h
 a 0 u 0 0 0 80 hln 100 COMMAND1=0n 0
@@ -73,8 +75,8 @@ a 0 s 0:13 0 70 0 hln 100 FLOAT=n
 r 0 0 0 130 80
 *end blocksym
 block 11 blocksym8 430 380 h
-a 0 x 0:13 0 0 0 hln 100 PKGREF=FlipFlop_D-1
-a 0 xp 9 0 0 0 hln 100 REFDES=FlipFlop_D-1
+a 0 x 0:13 0 0 0 hln 100 PKGREF=FlipFlop_D-0
+a 0 xp 9 0 0 0 hln 100 REFDES=FlipFlop_D-0
 *symbol blocksym11
 d 
 @type p
@@ -138,9 +140,13 @@ s 210 180 430 180 64
 s 210 220 210 400 66
 s 210 400 430 400 68
 w 73
+a 0 sr 0 0 0 0 hln 100 LABEL=OUT_1
 s 560 180 780 180 72
+a 0 sr 3 0 670 178 hcn 100 LABEL=OUT_1
 w 76
+a 0 sr 0 0 0 0 hln 100 LABEL=OUT_0
 s 560 400 780 400 75
+a 0 sr 3 0 670 398 hcn 100 LABEL=OUT_0
 b 13
 a 0 sr 0 0 0 0 hln 100 LABEL=DATA_1:0
 s 110 80 310 80 31
@@ -148,9 +154,11 @@ a 0 sr 3 0 210 78 hcn 100 LABEL=DATA_1:0
 s 310 80 310 200 33
 s 310 200 310 420 40
 b 71
-s 780 150 780 180 70
+a 0 sr 0 0 0 0 hln 100 LABEL=OUT_1:0
+s 780 110 850 110 80
+a 0 sr 3 0 815 108 hcn 100 LABEL=OUT_1:0
 s 780 180 780 400 74
-s 780 400 780 430 77
+s 780 180 780 110 78
 @junction
 j 430 200
 + p 8 D
@@ -194,14 +202,17 @@ j 430 400
 j 560 180
 + p 8 Q
 + w 73
-j 780 180
-+ w 73
-+ b 71
 j 560 400
 + p 11 Q
 + w 76
+j 780 180
++ w 73
++ b 71
 j 780 400
 + w 76
++ b 71
+j 850 110
++ s 82
 + b 71
 @attributes
 a 0 s 0:13 0 0 0 hln 100 PAGETITLE=
