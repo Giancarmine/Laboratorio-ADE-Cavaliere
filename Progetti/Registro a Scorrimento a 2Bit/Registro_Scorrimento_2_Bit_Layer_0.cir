@@ -1,0 +1,22 @@
+* C:\Users\hp\Documents\Laboratorio-ADE-Cavaliere\Progetti\Registro a Scorrimento a 2Bit\Registro_Scorrimento_2_Bit_Layer_0.sch
+
+* Schematics Version 9.1 - Web Update 1
+* Wed May 20 15:56:07 2015
+
+
+
+** Analysis setup **
+.tran 0ns 1000ns
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "Registro_Scorrimento_2_Bit_Layer_0.net"
+.INC "Registro_Scorrimento_2_Bit_Layer_0.als"
+
+
+.probe
+
+
+.END

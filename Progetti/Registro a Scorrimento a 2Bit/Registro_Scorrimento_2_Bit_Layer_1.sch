@@ -1,5 +1,5 @@
-*version 9.1 3095589287
-u 86
+*version 9.1 366885266
+u 88
 HB? 7
 @libraries
 @analysis
@@ -16,19 +16,19 @@ connectViaLocalLabels 0
 NoStim4ExtIFPortsWarnings 1
 AutoGenStim4ExtIFPorts 1
 @index
-pageloc 1 0 4047 
+pageloc 1 0 4172 
 @status
-c 115:04:20:11:59:22;1432115962
+c 115:04:20:15:44:34;1432129474
 *page 1 0 970 720 iA
 @ports
-port 82 IF_OUT 850 110 h
-a 1 xr 3 0 31 8 hcn 100 LABEL=OUT_1:0
-port 83 IF_IN 110 80 h
-a 1 xr 3 0 19 8 hcn 100 LABEL=D
 port 84 IF_IN 110 220 h
 a 1 xr 3 0 19 8 hcn 100 LABEL=Reset
 port 85 IF_IN 110 330 h
 a 1 xr 3 0 19 8 hcn 100 LABEL=CLK
+port 82 IF_OUT 850 110 h
+a 1 xr 3 0 31 8 hcn 100 LABEL=OUT[1:0]
+port 83 IF_IN 110 80 h
+a 1 xr 3 0 19 8 hcn 100 LABEL=D[1:0]
 @parts
 block 8 blocksym8 430 160 h
 a 0 x 0:13 0 0 0 hln 100 PKGREF=FlipFlop_D-1
@@ -105,22 +105,6 @@ a 1 u 13 0 60 95 hln 100 Revision=
 a 1 x 13 0 340 95 hrn 100 PAGECOUNT=1
 a 1 x 13 0 300 95 hrn 100 PAGENO=1
 @conn
-w 36
-a 0 sr 0 0 0 0 hln 100 LABEL=DATA_1
-s 430 200 310 200 35
-a 0 sr 3 0 370 198 hcn 100 LABEL=DATA_1
-w 39
-a 0 sr 0 0 0 0 hln 100 LABEL=DATA_0
-s 430 420 310 420 38
-a 0 sr 3 0 370 418 hcn 100 LABEL=DATA_0
-w 73
-a 0 sr 0 0 0 0 hln 100 LABEL=OUT_1
-s 560 180 780 180 72
-a 0 sr 3 0 670 178 hcn 100 LABEL=OUT_1
-w 76
-a 0 sr 0 0 0 0 hln 100 LABEL=OUT_0
-s 560 400 780 400 75
-a 0 sr 3 0 670 398 hcn 100 LABEL=OUT_0
 w 61
 s 110 220 210 220 60
 s 210 220 210 180 62
@@ -133,16 +117,32 @@ s 110 330 370 330 46
 s 370 330 370 440 48
 s 370 220 430 220 54
 s 370 330 370 220 52
+w 36
+a 0 sr 0 0 0 0 hln 100 LABEL=DATA[1]
+s 430 200 310 200 35
+a 0 sr 3 0 370 198 hcn 100 LABEL=DATA[1]
+w 39
+a 0 sr 0 0 0 0 hln 100 LABEL=DATA[0]
+s 430 420 310 420 38
+a 0 sr 3 0 370 418 hcn 100 LABEL=DATA[0]
+w 76
+a 0 sr 0 0 0 0 hln 100 LABEL=OUT[0]
+s 560 400 780 400 75
+a 0 sr 3 0 670 398 hcn 100 LABEL=OUT[0]
+w 73
+a 0 sr 0 0 0 0 hln 100 LABEL=OUT[1]
+s 560 180 780 180 72
+a 0 sr 3 0 670 178 hcn 100 LABEL=OUT[1]
 b 71
-a 0 sr 0 0 0 0 hln 100 LABEL=OUT_1:0
+a 0 sr 0:3 0 815 108 hcn 100 LABEL=OUT[1:0]
 s 780 110 850 110 80
-a 0 sr 3 0 815 108 hcn 100 LABEL=OUT_1:0
+a 0 sr 3 0 815 108 hcn 100 LABEL=OUT[1:0]
 s 780 180 780 400 74
 s 780 180 780 110 78
 b 13
-a 0 sr 0 0 0 0 hln 100 LABEL=DATA_1:0
+a 0 sr 0:3 0 210 78 hcn 100 LABEL=DATA[1:0]
 s 110 80 310 80 31
-a 0 sr 3 0 210 78 hcn 100 LABEL=DATA_1:0
+a 0 sr 3 0 210 78 hcn 100 LABEL=DATA[1:0]
 s 310 80 310 200 33
 s 310 200 310 420 40
 @junction
@@ -155,9 +155,11 @@ j 430 420
 j 310 200
 + w 36
 + b 13
+ DATA[1]
 j 310 420
 + w 39
 + b 13
+ DATA[0]
 j 430 440
 + p 11 EN
 + w 47
@@ -176,30 +178,40 @@ j 210 220
 j 430 400
 + p 11 CL
 + w 61
-j 560 180
-+ p 8 Q
-+ w 73
 j 560 400
 + p 11 Q
 + w 76
-j 780 180
-+ w 73
-+ b 71
 j 780 400
 + w 76
 + b 71
-j 850 110
-+ s 82
-+ b 71
-j 110 80
-+ s 83
-+ b 13
+ OUT[0]
 j 110 220
 + s 84
 + w 61
 j 110 330
 + s 85
 + w 47
+j 850 110
++ S 82
+ OUT[1]
+ OUT[0]
++ b 71
+ OUT[1]
+ OUT[0]
+j 560 180
++ p 8 Q
++ w 73
+j 780 180
++ w 73
++ b 71
+ OUT[1]
+j 110 80
++ S 83
+ D[1]
+ D[0]
++ b 13
+ DATA[1]
+ DATA[0]
 @attributes
 a 0 s 0:13 0 0 0 hln 100 PAGETITLE=
 a 0 s 0:13 0 0 0 hln 100 PAGENO=1

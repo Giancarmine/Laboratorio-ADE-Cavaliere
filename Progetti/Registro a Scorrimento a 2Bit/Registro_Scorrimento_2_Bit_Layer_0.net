@@ -1,0 +1,214 @@
+* Schematics Netlist *
+
+
+
+X_2-Bit_Reg_B_FlipFlop_D-1_U1A         Data_middle-1
++  2-Bit_Reg_B_FlipFlop_D-1_SR-Sync-1_RESET $G_DPWR $G_DGND 7404 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_2-Bit_Reg_B_FlipFlop_D-1_U2A         Clock
++  2-Bit_Reg_B_FlipFlop_D-1_SR-Sync-2_EN $G_DPWR $G_DGND 7404 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_2-Bit_Reg_B_FlipFlop_D-1_SR-Sync-1_U2A         Data_middle-1 Reset Clock
++  2-Bit_Reg_B_FlipFlop_D-1_SR-Sync-1_Latch-SR-NAND_SET $G_DPWR $G_DGND 7410
++  PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_2-Bit_Reg_B_FlipFlop_D-1_SR-Sync-1_U1A        
++  2-Bit_Reg_B_FlipFlop_D-1_SR-Sync-1_RESET Reset Clock
++  2-Bit_Reg_B_FlipFlop_D-1_SR-Sync-1_Latch-SR-NAND_RESET $G_DPWR $G_DGND 7410
++  PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_2-Bit_Reg_B_FlipFlop_D-1_SR-Sync-1_Latch-SR-NAND_U1A        
++  2-Bit_Reg_B_FlipFlop_D-1_SR-Sync-1_Latch-SR-NAND_SET
++  2-Bit_Reg_B_FlipFlop_D-1_SR-Sync-2_RESET
++  2-Bit_Reg_B_FlipFlop_D-1_SR-Sync-2_SET $G_DPWR $G_DGND 7400 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_2-Bit_Reg_B_FlipFlop_D-1_SR-Sync-1_Latch-SR-NAND_U3A        
++  2-Bit_Reg_B_FlipFlop_D-1_SR-Sync-2_SET
++  2-Bit_Reg_B_FlipFlop_D-1_SR-Sync-1_Latch-SR-NAND_RESET Reset
++  2-Bit_Reg_B_FlipFlop_D-1_SR-Sync-2_RESET $G_DPWR $G_DGND 7410 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_2-Bit_Reg_B_FlipFlop_D-1_SR-Sync-2_U2A        
++  2-Bit_Reg_B_FlipFlop_D-1_SR-Sync-2_SET Reset
++  2-Bit_Reg_B_FlipFlop_D-1_SR-Sync-2_EN
++  2-Bit_Reg_B_FlipFlop_D-1_SR-Sync-2_Latch-SR-NAND_SET $G_DPWR $G_DGND 7410
++  PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_2-Bit_Reg_B_FlipFlop_D-1_SR-Sync-2_U1A        
++  2-Bit_Reg_B_FlipFlop_D-1_SR-Sync-2_RESET Reset
++  2-Bit_Reg_B_FlipFlop_D-1_SR-Sync-2_EN
++  2-Bit_Reg_B_FlipFlop_D-1_SR-Sync-2_Latch-SR-NAND_RESET $G_DPWR $G_DGND 7410
++  PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_2-Bit_Reg_B_FlipFlop_D-1_SR-Sync-2_Latch-SR-NAND_U1A        
++  2-Bit_Reg_B_FlipFlop_D-1_SR-Sync-2_Latch-SR-NAND_SET
++  2-Bit_Reg_B_FlipFlop_D-1_SR-Sync-2_Latch-SR-NAND_Q Data_out-1 $G_DPWR $G_DGND
++  7400 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_2-Bit_Reg_B_FlipFlop_D-1_SR-Sync-2_Latch-SR-NAND_U3A         Data_out-1
++  2-Bit_Reg_B_FlipFlop_D-1_SR-Sync-2_Latch-SR-NAND_RESET Reset
++  2-Bit_Reg_B_FlipFlop_D-1_SR-Sync-2_Latch-SR-NAND_Q $G_DPWR $G_DGND 7410
++  PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_2-Bit_Reg_B_FlipFlop_D-0_U1A         Data_middle-0
++  2-Bit_Reg_B_FlipFlop_D-0_SR-Sync-1_RESET $G_DPWR $G_DGND 7404 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_2-Bit_Reg_B_FlipFlop_D-0_U2A         Clock
++  2-Bit_Reg_B_FlipFlop_D-0_SR-Sync-2_EN $G_DPWR $G_DGND 7404 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_2-Bit_Reg_B_FlipFlop_D-0_SR-Sync-1_U2A         Data_middle-0 Reset Clock
++  2-Bit_Reg_B_FlipFlop_D-0_SR-Sync-1_Latch-SR-NAND_SET $G_DPWR $G_DGND 7410
++  PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_2-Bit_Reg_B_FlipFlop_D-0_SR-Sync-1_U1A        
++  2-Bit_Reg_B_FlipFlop_D-0_SR-Sync-1_RESET Reset Clock
++  2-Bit_Reg_B_FlipFlop_D-0_SR-Sync-1_Latch-SR-NAND_RESET $G_DPWR $G_DGND 7410
++  PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_2-Bit_Reg_B_FlipFlop_D-0_SR-Sync-1_Latch-SR-NAND_U1A        
++  2-Bit_Reg_B_FlipFlop_D-0_SR-Sync-1_Latch-SR-NAND_SET
++  2-Bit_Reg_B_FlipFlop_D-0_SR-Sync-2_RESET
++  2-Bit_Reg_B_FlipFlop_D-0_SR-Sync-2_SET $G_DPWR $G_DGND 7400 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_2-Bit_Reg_B_FlipFlop_D-0_SR-Sync-1_Latch-SR-NAND_U3A        
++  2-Bit_Reg_B_FlipFlop_D-0_SR-Sync-2_SET
++  2-Bit_Reg_B_FlipFlop_D-0_SR-Sync-1_Latch-SR-NAND_RESET Reset
++  2-Bit_Reg_B_FlipFlop_D-0_SR-Sync-2_RESET $G_DPWR $G_DGND 7410 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_2-Bit_Reg_B_FlipFlop_D-0_SR-Sync-2_U2A        
++  2-Bit_Reg_B_FlipFlop_D-0_SR-Sync-2_SET Reset
++  2-Bit_Reg_B_FlipFlop_D-0_SR-Sync-2_EN
++  2-Bit_Reg_B_FlipFlop_D-0_SR-Sync-2_Latch-SR-NAND_SET $G_DPWR $G_DGND 7410
++  PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_2-Bit_Reg_B_FlipFlop_D-0_SR-Sync-2_U1A        
++  2-Bit_Reg_B_FlipFlop_D-0_SR-Sync-2_RESET Reset
++  2-Bit_Reg_B_FlipFlop_D-0_SR-Sync-2_EN
++  2-Bit_Reg_B_FlipFlop_D-0_SR-Sync-2_Latch-SR-NAND_RESET $G_DPWR $G_DGND 7410
++  PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_2-Bit_Reg_B_FlipFlop_D-0_SR-Sync-2_Latch-SR-NAND_U1A        
++  2-Bit_Reg_B_FlipFlop_D-0_SR-Sync-2_Latch-SR-NAND_SET
++  2-Bit_Reg_B_FlipFlop_D-0_SR-Sync-2_Latch-SR-NAND_Q Data_out-0 $G_DPWR $G_DGND
++  7400 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_2-Bit_Reg_B_FlipFlop_D-0_SR-Sync-2_Latch-SR-NAND_U3A         Data_out-0
++  2-Bit_Reg_B_FlipFlop_D-0_SR-Sync-2_Latch-SR-NAND_RESET Reset
++  2-Bit_Reg_B_FlipFlop_D-0_SR-Sync-2_Latch-SR-NAND_Q $G_DPWR $G_DGND 7410
++  PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_2-Bit_Reg_A_FlipFlop_D-1_U1A         Data_in1
++  2-Bit_Reg_A_FlipFlop_D-1_SR-Sync-1_RESET $G_DPWR $G_DGND 7404 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_2-Bit_Reg_A_FlipFlop_D-1_U2A         Clock
++  2-Bit_Reg_A_FlipFlop_D-1_SR-Sync-2_EN $G_DPWR $G_DGND 7404 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_2-Bit_Reg_A_FlipFlop_D-1_SR-Sync-1_U2A         Data_in1 Reset Clock
++  2-Bit_Reg_A_FlipFlop_D-1_SR-Sync-1_Latch-SR-NAND_SET $G_DPWR $G_DGND 7410
++  PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_2-Bit_Reg_A_FlipFlop_D-1_SR-Sync-1_U1A        
++  2-Bit_Reg_A_FlipFlop_D-1_SR-Sync-1_RESET Reset Clock
++  2-Bit_Reg_A_FlipFlop_D-1_SR-Sync-1_Latch-SR-NAND_RESET $G_DPWR $G_DGND 7410
++  PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_2-Bit_Reg_A_FlipFlop_D-1_SR-Sync-1_Latch-SR-NAND_U1A        
++  2-Bit_Reg_A_FlipFlop_D-1_SR-Sync-1_Latch-SR-NAND_SET
++  2-Bit_Reg_A_FlipFlop_D-1_SR-Sync-2_RESET
++  2-Bit_Reg_A_FlipFlop_D-1_SR-Sync-2_SET $G_DPWR $G_DGND 7400 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_2-Bit_Reg_A_FlipFlop_D-1_SR-Sync-1_Latch-SR-NAND_U3A        
++  2-Bit_Reg_A_FlipFlop_D-1_SR-Sync-2_SET
++  2-Bit_Reg_A_FlipFlop_D-1_SR-Sync-1_Latch-SR-NAND_RESET Reset
++  2-Bit_Reg_A_FlipFlop_D-1_SR-Sync-2_RESET $G_DPWR $G_DGND 7410 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_2-Bit_Reg_A_FlipFlop_D-1_SR-Sync-2_U2A        
++  2-Bit_Reg_A_FlipFlop_D-1_SR-Sync-2_SET Reset
++  2-Bit_Reg_A_FlipFlop_D-1_SR-Sync-2_EN
++  2-Bit_Reg_A_FlipFlop_D-1_SR-Sync-2_Latch-SR-NAND_SET $G_DPWR $G_DGND 7410
++  PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_2-Bit_Reg_A_FlipFlop_D-1_SR-Sync-2_U1A        
++  2-Bit_Reg_A_FlipFlop_D-1_SR-Sync-2_RESET Reset
++  2-Bit_Reg_A_FlipFlop_D-1_SR-Sync-2_EN
++  2-Bit_Reg_A_FlipFlop_D-1_SR-Sync-2_Latch-SR-NAND_RESET $G_DPWR $G_DGND 7410
++  PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_2-Bit_Reg_A_FlipFlop_D-1_SR-Sync-2_Latch-SR-NAND_U1A        
++  2-Bit_Reg_A_FlipFlop_D-1_SR-Sync-2_Latch-SR-NAND_SET
++  2-Bit_Reg_A_FlipFlop_D-1_SR-Sync-2_Latch-SR-NAND_Q Data_middle-1 $G_DPWR
++  $G_DGND 7400 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_2-Bit_Reg_A_FlipFlop_D-1_SR-Sync-2_Latch-SR-NAND_U3A         Data_middle-1
++  2-Bit_Reg_A_FlipFlop_D-1_SR-Sync-2_Latch-SR-NAND_RESET Reset
++  2-Bit_Reg_A_FlipFlop_D-1_SR-Sync-2_Latch-SR-NAND_Q $G_DPWR $G_DGND 7410
++  PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_2-Bit_Reg_A_FlipFlop_D-0_U1A         Data_in0
++  2-Bit_Reg_A_FlipFlop_D-0_SR-Sync-1_RESET $G_DPWR $G_DGND 7404 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_2-Bit_Reg_A_FlipFlop_D-0_U2A         Clock
++  2-Bit_Reg_A_FlipFlop_D-0_SR-Sync-2_EN $G_DPWR $G_DGND 7404 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_2-Bit_Reg_A_FlipFlop_D-0_SR-Sync-1_U2A         Data_in0 Reset Clock
++  2-Bit_Reg_A_FlipFlop_D-0_SR-Sync-1_Latch-SR-NAND_SET $G_DPWR $G_DGND 7410
++  PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_2-Bit_Reg_A_FlipFlop_D-0_SR-Sync-1_U1A        
++  2-Bit_Reg_A_FlipFlop_D-0_SR-Sync-1_RESET Reset Clock
++  2-Bit_Reg_A_FlipFlop_D-0_SR-Sync-1_Latch-SR-NAND_RESET $G_DPWR $G_DGND 7410
++  PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_2-Bit_Reg_A_FlipFlop_D-0_SR-Sync-1_Latch-SR-NAND_U1A        
++  2-Bit_Reg_A_FlipFlop_D-0_SR-Sync-1_Latch-SR-NAND_SET
++  2-Bit_Reg_A_FlipFlop_D-0_SR-Sync-2_RESET
++  2-Bit_Reg_A_FlipFlop_D-0_SR-Sync-2_SET $G_DPWR $G_DGND 7400 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_2-Bit_Reg_A_FlipFlop_D-0_SR-Sync-1_Latch-SR-NAND_U3A        
++  2-Bit_Reg_A_FlipFlop_D-0_SR-Sync-2_SET
++  2-Bit_Reg_A_FlipFlop_D-0_SR-Sync-1_Latch-SR-NAND_RESET Reset
++  2-Bit_Reg_A_FlipFlop_D-0_SR-Sync-2_RESET $G_DPWR $G_DGND 7410 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_2-Bit_Reg_A_FlipFlop_D-0_SR-Sync-2_U2A        
++  2-Bit_Reg_A_FlipFlop_D-0_SR-Sync-2_SET Reset
++  2-Bit_Reg_A_FlipFlop_D-0_SR-Sync-2_EN
++  2-Bit_Reg_A_FlipFlop_D-0_SR-Sync-2_Latch-SR-NAND_SET $G_DPWR $G_DGND 7410
++  PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_2-Bit_Reg_A_FlipFlop_D-0_SR-Sync-2_U1A        
++  2-Bit_Reg_A_FlipFlop_D-0_SR-Sync-2_RESET Reset
++  2-Bit_Reg_A_FlipFlop_D-0_SR-Sync-2_EN
++  2-Bit_Reg_A_FlipFlop_D-0_SR-Sync-2_Latch-SR-NAND_RESET $G_DPWR $G_DGND 7410
++  PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_2-Bit_Reg_A_FlipFlop_D-0_SR-Sync-2_Latch-SR-NAND_U1A        
++  2-Bit_Reg_A_FlipFlop_D-0_SR-Sync-2_Latch-SR-NAND_SET
++  2-Bit_Reg_A_FlipFlop_D-0_SR-Sync-2_Latch-SR-NAND_Q Data_middle-0 $G_DPWR
++  $G_DGND 7400 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_2-Bit_Reg_A_FlipFlop_D-0_SR-Sync-2_Latch-SR-NAND_U3A         Data_middle-0
++  2-Bit_Reg_A_FlipFlop_D-0_SR-Sync-2_Latch-SR-NAND_RESET Reset
++  2-Bit_Reg_A_FlipFlop_D-0_SR-Sync-2_Latch-SR-NAND_Q $G_DPWR $G_DGND 7410
++  PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+U_Reset         STIM(1,1)
++ $G_DPWR $G_DGND
++ Reset 
++ IO_STM
++ IO_LEVEL=0
++  0n 1  
++ 10n 0  
+U_IN         STIM(4,1111)
++ $G_DPWR $G_DGND
++ Data_in3 Data_in2 Data_in1 Data_in0 
++ IO_STM
++ IO_LEVEL=0
++  0n 0011  
++ 300n 0001  
++ 450n 0000  
+U_Clock         STIM(1,1) $G_DPWR $G_DGND Clock IO_STM IO_LEVEL=0 
++ 0 1
++ +80ns 0
++REPEAT FOREVER
++ +80ns 1
++  +80ns 0
++ ENDREPEAT
